@@ -1,4 +1,4 @@
-p1 {
+/p1 {
     color: orange;
     font-size: 40px;
     font-family: 'Bell MT';
@@ -10,17 +10,18 @@ header {
   background-position: center;
 }
 
-ul {
+.tabs,
+.tabs-contents {
     float: left;
     list-style-type: none;
     font-family: Arial;
 }
 
-ul li {
+.tabs li {
     display: inline-block;
 }
 
-ul li a {
+.tabs li a {
     text-decoration: none;
     color: black;
     padding: 5px 20px;
@@ -28,12 +29,19 @@ ul li a {
     transition: 0.5s ease;
 }
 
-ul li a:hover {
+.tabs li a.active {
+    background-color: #FFFFFF;
+    color: #424242;
+    cursor: default; 
+
+}
+
+.tabs li a:hover {
     background-color: white;
     color: black;
 }
 
-.title {
+.Title {
     position: absolute;
     top: 50%;
     left: 50%;

@@ -1,53 +1,110 @@
-/p1 {
+/*p1 {
     color: orange;
     font-size: 40px;
     font-family: 'Bell MT';
+} */
+
+/* General styles */
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialised;
 }
+
 header {
-  background-image: url(ohno.jpg);
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
+    background-image: url(ohno.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
 }
+
+body {
+    margin-top: 5em;
+    font: 300 20px/1.5 "Helvetica", Arial, sans-serif;
+}
+
+.container {
+    width: 75%;
+    margin: 0 auto;
+}
+
 
 .tabs,
-.tabs-contents {
-    float: left;
-    list-style-type: none;
-    font-family: Arial;
+.tab-contents {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.tabs li {
-    display: inline-block;
+.tabs {
+    text-align: center;
+    font-size: 0;
 }
 
-.tabs li a {
-    text-decoration: none;
-    color: black;
-    padding: 5px 20px;
-    border: 1px solid black;
-    transition: 0.5s ease;
+    .tabs li {
+        display: inline;
+    }
+
+        .tabs li a {
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            color: #8D8D8D;
+            border: 1px solid #DCDADA;
+            background-color: #F5F5F5;
+            height: 5em;
+            line-height: 5em;
+            display: inline-block;
+            padding: 0 3em;
+            transition: all .3s ease;
+        }
+
+            .tabs li a.active {
+                background-color: #FFFFFF;
+                color: #424242;
+                cursor: default;
+            }
+
+            .tabs li a:hover:not(.active) {
+                background-color: rgba(245, 245, 245, .25);
+                color: #424242;
+            }
+
+
+        .tabs li:first-child a {
+            border-radius: 5px 0 0 5px;
+        }
+
+        .tabs li:last-child a {
+            border-radius: 0 5px 5px 0;
+        }
+
+        .tabs li:not(:first-child) {
+            margin-left: -1px;
+        }
+
+.tab-contents {
+    width: 100%;
+    position: relative;
 }
 
-.tabs li a.active {
-    background-color: #FFFFFF;
-    color: #424242;
-    cursor: default; 
+    .tab-contents li {
+        padding: 2em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity .3s ease;
+        pointer-events: none;
+    }
 
-}
+        .tab-contents li.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
 
-.tabs li a:hover {
-    background-color: white;
-    color: black;
-}
-
-.Title {
+.title {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
-    transform:translate(-50%, -50%);
-}
-
-
-
+    transform: translate(-50%, -50%);
 

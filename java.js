@@ -1,6 +1,4 @@
-
 document.addEventListener('click', tabClick);
-
 
 function tabClick(event) {
     var elem = event.target,

@@ -27,7 +27,6 @@ body {
     margin: 0 auto;
 }
 
-
 .tabs,
 .tab-contents {
     list-style: none;
@@ -39,7 +38,6 @@ body {
     text-align: center;
     font-size: 0;
 }
-
     .tabs li {
         display: inline;
     }
